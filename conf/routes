@@ -4,6 +4,21 @@
 
 # Home page
 GET     /                                       Application.index
+GET		/posts/{<[0-9]+>id}								Application.show
+POST	/posts/{postId}/comments				Application.postComment
+GET		/captcha								Application.captcha
+GET		/posts/{tag}							Application.listTagged
+POST	/admin/myPosts/{id}						Admin.save
+POST	/admin/new								Admin.save		
+GET		/admin/myPosts/{id}						Admin.form
+GET		/admin/new								Admin.form
+
+# Administration
+GET     /admin/?                                Admin.index
+*       /admin                                  module:crud
+
+# Import Secure routes
+*       /                                       module:secure
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

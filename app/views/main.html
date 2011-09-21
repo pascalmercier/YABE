@@ -2,11 +2,12 @@
 <html>
     <head>
         <title>#{get 'title' /}</title>		
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" type="text/css" media="screen" 
-            href="@{'/public/stylesheets/main.css'}" />
-        <link rel="shortcut icon" type="image/png" 
-            href="@{'/public/images/favicon.png'}" />
+        <meta http-equiv="Content-Type" content="text/html; c      harset=utf-8"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}" />
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}" />
+			
+		<script src="@{'/public/javascripts/jquery-1.5.2.min.js'}"></script>
+		<script src="@{'/public/javascripts/jquery.tools.min.js'}"></script>
     </head>
     <body>
         
@@ -16,12 +17,12 @@
             </div>
             <ul id="tools">
                 <li>
-                    <a href="#">Log in to write something</a>
+                    <a href="@{Admin.index()}">Log in to write something</a>
                 </li>
             </ul>
             <div id="title">
                 <span class="about">About this blog</span>
-                <h1><a href="#">${blogTitle}</a></h1>
+                <h1><a href="@{Application.index()}">${blogTitle}</a></h1>
                 <h2>${blogBaseline}</h2>
             </div>
         </div>
