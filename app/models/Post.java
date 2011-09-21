@@ -7,6 +7,7 @@ import play.db.jpa.*;
 import play.data.validation.*;
 
 @Entity
+@Table(schema="public", name = "post")
 public class Post extends Model {
 	
 	@Required

@@ -7,6 +7,7 @@ import play.db.jpa.*;
 import play.data.validation.*;
  
 @Entity
+@Table(schema="public", name = "tag")
 public class Tag extends Model implements Comparable<Tag> {
 	
 	@Required
